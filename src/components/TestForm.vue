@@ -392,7 +392,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .field {
   margin-bottom: 24px;
 }
@@ -401,12 +401,10 @@ export default {
   margin-right: 8px;
 }
 
-.error {
-  font-size: x-small;
-  color: red;
+.error,
+.star {
+  color: $main-color;
 }
 
-.star {
-  color: red;
-}
+
 </style>
