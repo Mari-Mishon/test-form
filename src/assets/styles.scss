@@ -1,1 +1,70 @@
 @import "./variables.scss";
+
+.testForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+.note {
+  font-style: italic;
+  font-size: smaller;
+}
+
+.form_label_marked {
+
+  @extend %form-text;
+}
+
+.form_label_marked:after {
+  content: "*";
+  position: relative;
+  top: 0;
+  font-size: 13px;
+  color: #f00;
+}
+
+.form_label {
+  @extend %form-text;
+  
+}
+
+.field{
+    clear: left;
+}
+.form_radio_btn {
+    
+    float: left;
+}
+.form_radio_btn input[type="radio"] {
+  display: none;
+  
+}
+.form_radio_btn label {
+    
+  display: inline-block;
+  padding: 0px 12px;
+  line-height: 34px;
+  border: 1px solid #999;
+  border-right: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-1 label {
+  border-radius: 6px 0 0 6px;
+}
+.btn-2 label {
+  border-radius: 0 6px 6px 0;
+  border-right: 1px solid #999;
+}
+
+/* Checked */
+.btn-1 input[type="radio"]:checked + label {
+  background: #ffc5c5;
+}
+.btn-2 input[type="radio"]:checked + label {
+  background: #ffc5c5;
+}
