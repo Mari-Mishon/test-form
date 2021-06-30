@@ -254,7 +254,7 @@
 
       <p>
         <label for="passport-auhority">Кем выдан</label>
-        <input id="passport-auhority" type="text" />
+        <input id="passport-auhority" type="text" v-model="passportAuhority" />
       </p>
       <p>
         <label for="passport-date"
@@ -290,7 +290,7 @@ export default {
   setup() {
     return {
       v$: useVuelidate(),
-    ...constants
+      ...constants,
     };
   },
   data() {
@@ -308,9 +308,12 @@ export default {
       country: "",
       area: "",
       city: "",
+      street: "",
+      house: "",
       documentType: this.documents[0].name,
       passportSerial: "",
       passportNumber: null,
+      passportAuhority: "",
       passportDate: null,
     };
   },
@@ -351,19 +354,19 @@ export default {
         numeric,
         minLength: minLength(6),
       },
-      country: {},
-      area: {},
+
       city: {
         required,
       },
+
       documentType: {
         required,
       },
-      passportSerial: {},
 
       passportNumber: {
         numeric,
       },
+
       passportDateValide: {
         required,
         maxValue: maxValue(new Date()),
