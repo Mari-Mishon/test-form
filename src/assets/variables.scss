@@ -1,26 +1,24 @@
-$main-color: red;
-$red: #eb5757;
-$red-hover: #fe130b;
-
-$orange: #ff8964;
-$orange-hover: #ff8964;
-$orange-disabled: rgba(255, 137, 100, 0.8);
+$important-color: red;
+$body-color: white;
+$form-color: #ffdddd57;
+$input-border-color: #aaaaaa;
+$button-border-color: #999;
 
 %form-text {
-    
   display: block;
+  margin-left: 5px;
   margin-bottom: 6px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.04em;
-  color: #686ea1;
+  color: #2c3e50;
 }
 
-%input_selector{
-    padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
+%input_selector {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid $input-border-color;
 }

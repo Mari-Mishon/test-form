@@ -1,11 +1,66 @@
 @import "./variables.scss";
+body {
+  background-color: $body-color;
+}
+
+input:not([type="checkbox"]) {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid $input-border-color;
+}
+
+input:invalid {
+  background-color: #ffdddd;
+}
+
+select {
+  @extend %input_selector;
+}
+
+select:checked {
+  @extend %input_selector;
+}
+
+select[multiple]:checked {
+  padding-right: 0;
+  color: brown;
+}
+
+label {
+  text-align: left;
+}
+
+button {
+  background-color: #22b2ea;
+  color: $body-color;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
 
 .testForm {
-  background-color: #ffffff;
+  background-color: $form-color;
   margin: 100px auto;
   padding: 40px;
   width: 70%;
   min-width: 300px;
+}
+
+.error {
+  color: $important-color;
+  font-size: 14px;
 }
 
 .note {
@@ -13,8 +68,8 @@
   font-size: smaller;
 }
 
+.form_label,
 .form_label_marked {
-
   @extend %form-text;
 }
 
@@ -22,32 +77,27 @@
   content: "*";
   position: relative;
   top: 0;
-  font-size: 13px;
-  color: #f00;
+  font-size: 15px;
+  color: $important-color;
 }
 
-.form_label {
-  @extend %form-text;
-  
+.field {
+  clear: left;
 }
 
-.field{
-    clear: left;
-}
 .form_radio_btn {
-    
-    float: left;
+  float: left;
 }
+
 .form_radio_btn input[type="radio"] {
   display: none;
-  
 }
+
 .form_radio_btn label {
-    
   display: inline-block;
   padding: 0px 12px;
   line-height: 34px;
-  border: 1px solid #999;
+  border: 1px solid $button-border-color;
   border-right: none;
   cursor: pointer;
   user-select: none;
@@ -58,13 +108,11 @@
 }
 .btn-2 label {
   border-radius: 0 6px 6px 0;
-  border-right: 1px solid #999;
+  border-right: 1px solid $button-border-color;
 }
 
 /* Checked */
-.btn-1 input[type="radio"]:checked + label {
-  background: #ffc5c5;
-}
+.btn-1 input[type="radio"]:checked + label,
 .btn-2 input[type="radio"]:checked + label {
-  background: #ffc5c5;
+  background: #ff8e7aa8;
 }
