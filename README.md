@@ -1,5 +1,13 @@
 # test-form
 
+## Project demo 
+
+https://mari-mishon.github.io/test-form/
+
+## Примечания
+
+Во VueJs 3 панель devtools  (beta версия) работает плохо в продакшн (`vue.config.devtools=true` отсутствует. [Эти](https://github.com/vuejs/devtools/issues/1321) решения не сработали), поэтому проект запущен с опцией `--mode=development`
+
 ## Project setup
 ```
 npm install
